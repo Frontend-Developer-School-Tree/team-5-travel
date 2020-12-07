@@ -13,7 +13,7 @@ function Footer(){
                <div className="footer__container">
                    <div className="footer__container__sx">
                    <img src={data.agency.image} style={{ width: 90, height: 40,marginBottom:'2vh' }} />
-                       <p>Insolita Travels | Sicily DMC & Travel Agency (Licence nr. 2226/S2-Tur)</p>
+                       <p>Insolita Travels | Sicily DMC - Travel Agency (Licence nr. 2226/S2-Tur)</p>
                        <p>Viale della Gioventù, 26 A -95014 Giarre (Catania)</p>
                    </div>
                    <div className="footer__container__dx">

@@ -15,11 +15,11 @@
   height: 6vh;
 }
 
-.container .accordion .card .card-header.infoCardHeader {
+.containerInfo .accordion .card .card-header.infoCardHeader {
   background: #fff;
 }
 
-.container .accordion .card .card-header.infoCardHeader h2 {
+.containerInfo .accordion .card .card-header.infoCardHeader h2 {
   color: #0063c9;
   font-size: 32px;
   margin-top: 10px;
@@ -27,49 +27,49 @@
   text-transform: uppercase;
 }
 
-.container .card-header.infoCardHeader i {
+.containerInfo .card-header.infoCardHeader i {
   color: darkgrey;
   font-size: 18px;
 }
 
-.container .accordion .card .card-body div.boxType {
+.containerInfo .accordion .card .card-body div.boxType {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
 }
 
-.container .accordion .card .card-body div.text-right p {
+.containerInfo .accordion .card .card-body div.text-right p {
   font-weight: 650;
 }
 
-.container .accordion .card .card-body div.text-right span {
+.containerInfo .accordion .card .card-body div.text-right span {
   color: #ffb400;
   font-weight: 600;
   font-size: x-large;
 }
 
-.container .accordion .card .card-body div.text-left h3 {
+.containerInfo .accordion .card .card-body div.text-left h3 {
   color: #ffb400;
   margin-bottom: 10px;
   margin-top: 16px;
 }
 
 @media screen and (max-width: 1015px) {
-    .container .accordion .card .card-header.infoCardHeader h2 {
+    .containerInfo .accordion .card .card-header.infoCardHeader h2 {
         font-size: 18px;
     }
 
-    .container .accordion .card .card-body {
+    .containerInfo .accordion .card .card-body {
       font-size: 14px;
     }
   }
 
 @media screen and (max-width: 792px) {
-  .container .accordion .card .card-header.infoCardHeader h2 {
+  .containerInfo .accordion .card .card-header.infoCardHeader h2 {
       font-size: 15px;
   }
 
-  .container .accordion .card .card-body {
+  .containerInfo .accordion .card .card-body {
     font-size: 12px;
   }
 }

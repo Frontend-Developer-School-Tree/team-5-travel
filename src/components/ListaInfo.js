@@ -6,7 +6,7 @@ const ListaInfo = () => {
   const { data } = useContext(AppContext);
 
   return (
-    <div className="container mt-5">
+    <div className="containerInfo mt-5">
       <Accordion>
         <Info info={data.documentsRequested} eventKey="0"/>
       </Accordion>

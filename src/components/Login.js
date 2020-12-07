@@ -33,36 +33,11 @@ const Login = () => {
   }, []);
 
   return (
-    // <div className="Login">
 
-    //   <form onSubmit={(e) => submitForm(e)} noValidate>
-
-    //     <div className="input-group mb-3">
-    //       <div className="input-group-prepend">
-    //         <span className="input-group-text">USER</span>
-    //       </div>
-    //       <input type="text" className="form-control" placeholder="Username"
-    //         name="username" value={username} onChange={e => { setUsername(e.target.value) }}></input>
-    //     </div>
-
-    //     <div className="input-group mb-3">
-    //       <div className="input-group-prepend">
-    //         <span className="input-group-text">PW</span>
-    //       </div>
-    //       <input type="password" className="form-control" placeholder="Password"
-    //         name="password" value={password} onChange={e => { setPassword(e.target.value) }}></input>
-    //     </div>
-
-    //       <button type="submit" name="confirm">ACCEDI!</button>
-
-    //   </form>
-
-    // </div >
-
-    <div class="login-box">
+    <div className="login-box">
       <h2>Login</h2>
       <form onSubmit={(e) => submitForm(e)} noValidate>
-        <div class="user-box">
+        <div className="user-box">
           <input
             type="text"
             className="form-control"
@@ -74,7 +49,7 @@ const Login = () => {
           ></input>
           <label>Username</label>
         </div>
-        <div class="user-box">
+        <div className="user-box">
           <input
             type="password"
             className="form-control"

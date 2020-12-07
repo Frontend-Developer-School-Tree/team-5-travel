@@ -8,8 +8,7 @@
 
 .mapComp_cardContainer{
 
-    width: 150vh;
-
+    width: 100%;
     margin-top: 5vh;
     margin-bottom: 5vh;
     border-radius: 20px;
@@ -23,7 +22,6 @@
 .cardTitle{
     font-size: 20px;
     margin: 2rem 0;
-    
     color:#FFB400;
     font-size: 30px;
 }
@@ -32,7 +30,7 @@
     margin: 2rem 0;
     background-color: white;
 }
-h5{
+.mapComp h5{
     font-size: 20px;
     text-transform: uppercase;
     color:rgb(169, 169, 169);

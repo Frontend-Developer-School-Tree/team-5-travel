@@ -5,11 +5,6 @@ import { Accordion, Card, Modal, Button } from 'react-bootstrap';
 
 import { AppContext } from "../context/AppContext";
 
-/* manca da fare la nav a sinistra
-sistemare grafica login con React Bootstrap
-componenti mancanti
-sistemazione css glpbale
-merge finale*/
 
 function Posto(props) {
     const { eventKey, posto } = props
@@ -80,8 +75,6 @@ function Posto(props) {
         const { type, data } = infoModal
         let modalClass = type
 
-        console.log("modalClass", modalClass, ", type", type, ", data", data)
-
         return (
             <Modal show={showModal} onHide={closeModal}
                 dialogClassName={modalClass} animation={type === "modal-img" ? false : true}>
@@ -127,18 +120,18 @@ function Posto(props) {
                         </Modal.Header>
                         <Modal.Body>
                             <div className="accomodation">
-                                <div className="small-text">
+                                <div className="small-text mt-1">
                                     <h5>{data.typology}
                                         <span className="starsContainer">{data.stars && showStars(data.stars)}</span>
                                     </h5>
                                 </div>
 
 
-                                <div className="accomodationFotoGallery col-6 col-md-6 col-sm-12" >
+                                <div className="accomodationFotoGallery" >
                                     {data.images.map(((accImg, index) => (
                                         <Fragment key={accImg.id}>
-                                            {accImg &&
-                                                <div className="accomodationFoto"
+                                            {accImg.image &&
+                                                <div className="accomodationFoto mb-3"
                                                     style={{ backgroundImage: `url(${accImg.image})` }}></div>
                                             }
                                         </Fragment>
@@ -197,28 +190,27 @@ function Posto(props) {
         )
     }
 
-    useEffect(() => {
-        // console.log(infoPosto[0].days[0].images[0].image)
-        console.log("nomePosto", nomePosto, "datePosto", datePosto, "infoPosto", infoPosto)
-    }, [])
-
-
     return (
         <>
             <ModalCustom />
             <Card>
 
-                <Accordion.Toggle as={Card.Header} eventKey={eventKey} onClick={() => { setArrow(!arrow) }}>
-                    <Card.Header className="accordionCardHeader" >
-                        <div>
-                            <span>{posto.nomePosto}
-                                <h2 className="ml-3 text-gray display-inline">
-                                    {groupData(datePosto)}
-                                </h2>
-                            </span>
-                            {arrow ? <i className="fa fa-angle-up text-gray float-right"></i> : <i className="fa fa-angle-down text-gray float-right"></i>}
+                <Accordion.Toggle as={Button} variant="outline-light" eventKey={eventKey} onClick={() => { setArrow(!arrow) }}>
+                <div className="accordionCardHeader">
+                        <div className="d-flex">
+                            <div className="ml-3 nomePosto"><h1>{posto.nomePosto}</h1>
+                            <h2 className="ml-2">
+                                {groupData(datePosto)}
+                            </h2>
+                            </div>
                         </div>
-                    </Card.Header>
+                        <div className="arrowIcon">
+                            {arrow ?
+                                <i className="fa fa-angle-up text-gray"></i> :
+                                <i className="fa fa-angle-down text-gray"></i>
+                            }
+                        </div>
+                  </div>
                 </Accordion.Toggle>
 
 
@@ -231,12 +223,12 @@ function Posto(props) {
 
                                 <div className="timelistContainer col-1">
 
-                                    <div className="circle-small m-1" style={{ backgroundColor: "rgb(140, 210, 255)" }}>
+                                    <div className="circle-small m-1" style={{ backgroundColor: "#44DDFF" }}>
                                         <i className="fa fa-map-marker-alt"></i>
                                     </div>
 
                                     {info.transports[0] &&
-                                        <div className="circle-small m-1" style={{ backgroundColor: "rgb(140, 255, 211)" }}>
+                                        <div className="circle-small m-1" style={{ backgroundColor: "#FFB300" }}>
                                             <i className="fa fa-car"></i>
                                         </div>
                                     }
@@ -312,7 +304,7 @@ function Posto(props) {
                                                         {acc.images.map(((accImg, index) => (
                                                             <Fragment key={accImg.id}>
                                                                 {accImg.image &&
-                                                                    <div className="accomodationFoto container-image"
+                                                                    <div className="accomodationFoto container-image ml-4"
                                                                         style={{ backgroundImage: `url(${accImg.image})` }}
                                                                         onClick={() => {
                                                                             createModal("modal-img", acc.images)

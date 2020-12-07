@@ -92,15 +92,12 @@ const ListaPosti = () => {
 
   useEffect(() => {
     setPosti(unisciPosti(ordinaDataArray(giorni, "asc")))
-     // stampaControllo(posti)
+    stampaControllo(posti)
   }, [])
 
 
   return (
-    <div className="ListaPosti">
-
-      <div className="row">
-        <div className="col">
+    <div className="ListaPosti" id="ListaPosti">
 
           {posti.map((posto, index) => (
 
@@ -109,10 +106,7 @@ const ListaPosti = () => {
             </Accordion>
 
           ))}
-
-        </div>
-      </div>
-
+ 
     </div>
   )
 }

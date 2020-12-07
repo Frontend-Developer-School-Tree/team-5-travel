@@ -11,7 +11,7 @@ import Operator from './Operator';
 import Footer from './Footer';
 
 
-import Logout from './Logout'
+import Navbar from './Navbar'
 
 import { AppContext } from "../context/AppContext";
 import { authContext } from "../context/ProvideAuth";
@@ -29,7 +29,7 @@ function Page() {
   useEffect(() => {
     //console.log("PAGE: ", auth)
   }, [])
-  
+
 
   return (
 
@@ -39,15 +39,18 @@ function Page() {
         ?
         <>
 
+          <Navbar />
+          <Header />
 
-        <Logout />
-        <Header />
-        <Operator/>
-        <MapComp />
-        <ListaPosti />
-        <Tariffe />
-        <ListaInfo/>
-        <Footer/>
+          <div className="Container">
+            <Operator />
+            <MapComp />
+            <ListaPosti />
+            <Tariffe />
+            <ListaInfo />
+          </div>
+
+          <Footer />
 
         </>
 

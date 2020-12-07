@@ -17,9 +17,10 @@ const Header = () => {
       <div className="row">
       <div className="Logo"></div>
         <div className="vh-100 overlay">
-          <div className="title pb-3">
-            <h1> {data.customerName} <br /> {data.title} </h1>
-            <button className="btn btn-primary">
+          <div className="title rob-bold">
+            <h1 className="rob-italic">PER {data.customerName}</h1>
+            <h2>{data.title}</h2>
+            <button className="btn btn-primary text-uppercase">
               scopri di più
         </button>
           </div>

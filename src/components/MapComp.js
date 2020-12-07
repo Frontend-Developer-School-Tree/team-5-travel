@@ -45,11 +45,21 @@ const MapComp = () => {
   const giorni = dataTo - dataFrom + 1;
   const notti = dataTo - dataFrom;
 
-  console.log(giorni);
-  console.log(notti);
+  // console.log(giorni);
+  // console.log(notti);
 
   return (
     <>
+      <div className="mapComp" id="Mappa">
+        <Card className="mapComp_cardContainer">
+          <Card.Body>
+            <div className="mapComp_cardContainer_mapWrapper">
+              <MapContainer
+                style={{ width: "100%", height: 300 }}
+                center={coordsCitta[0]}
+                zoom={7}
+                scrollWheelZoom={false}
+              >
 
                 <TileLayer
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -65,7 +75,7 @@ const MapComp = () => {
                 ))}
               </MapContainer>
             </div>
-            <Card.Title className="cardTitle">{data.title}</Card.Title>
+            <Card.Title className="cardTitle text-uppercase">{data.title}</Card.Title>
             <Breadcrumb className="breadCrumb">
               {filt.map((el, i) => (
                 <Breadcrumb.Item key={i} active>

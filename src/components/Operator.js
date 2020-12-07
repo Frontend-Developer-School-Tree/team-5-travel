@@ -10,12 +10,12 @@ function Operator() {
   return (
     <div className="operator">
       <Card
-        style={{ width: "150vh" }}
-        className="container-fluid mt-5 ml-3 mr-3"
+        className="mt-5"
       >
         <Card.Body className="operator__cardBody">
+          <div className="operatorFoto container-image" style={{ backgroundImage: `url(${data.operator.image})` }}></div>
           <div className="operator__cardBody__sx">
-            <img src={data.operator.image} />
+    
             <h3 className="mt-2">{data.operator.name}</h3>
             <p>Il tuo agente di viaggio</p>
             <div className="d-flex">

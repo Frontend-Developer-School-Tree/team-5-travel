@@ -36,7 +36,7 @@ const Tariffe = () => {
   // console.log(goOver(included))
 
   return (
-    <div className="container mt-5">
+    <div className="containerInfo mt-5" id="Tariffe">
       <Accordion>
         <Card>
           <Card.Header className="infoCardHeader">

@@ -1,32 +1,27 @@
 .ListaPosti h1 {
     font-size: 28px;
-    padding-bottom: 8px;
-    line-height: 33px;
     color: #FFB400;
     font-weight: bold;
 }
 
 .ListaPosti h2 {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 26px;
     font-weight: 500;
+    color: #5B5959;
 }
 
 .ListaPosti h3 {
     font-size: 18px;
-    line-height: 20px;
     font-weight: bold;
 }
 
 .ListaPosti h4 {
     font-size: 14px;
-    line-height: 16px;
     font-weight: bold;
 }
 
 .ListaPosti h5 {
     font-size: 14px;
-    line-height: 16px;
     padding: 15px;
     font-weight: bold;
     text-transform: uppercase!important;
@@ -57,6 +52,7 @@
 
 .accomodationFotoGallery {
     display: flex;
+    width: 100%;
 }
 
 .accomodationFoto {
@@ -119,8 +115,6 @@
     font-size: 18px;
 }
 
-
-
 .circle-day div {
     display: flex;
     justify-content: center;
@@ -170,6 +164,7 @@
 
 .starsContainer {
     margin-left: 10px;
+    color:#FFD500;
 }
 
 .modal-transport {
@@ -213,6 +208,7 @@
     border-left: 12px;
     border-left-style: dotted;
     border-left-color: #fbcc40;
+    
 }
 
 .circle-small {
@@ -241,4 +237,83 @@
 .ggCircleDay {
     font-weight: bold;
     font-size: 1.8em;
+}
+
+.accordionCardHeader {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordionCardHeader .nomePosto {
+    display: flex;
+    align-items: center;
+}
+
+.accordionCardHeader .arrowIcon {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.accordionCardHeader h1 {
+    font-size: 32px;
+    margin-top: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #5B5959;
+}
+
+.accordionCardHeader h2 {
+    font-size: 23px;
+    margin-top: 10px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #9BA7AF;
+}
+
+@media screen and (max-width: 792px) {
+    .ListaPosti h1 {
+        font-size: 24px;
+        color: #FFB400;
+        font-weight: bold;
+    }
+    .ListaPosti h2 {
+        font-size: 20px;
+        font-weight: 500;
+        color: #5B5959;
+    }
+    .ListaPosti h3 {
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .accordionCardHeader h1 {
+        font-size: 24px;
+        margin-top: 10px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #5B5959;
+    }
+    .accordionCardHeader h2 {
+        font-size: 18px;
+        margin-top: 10px;
+        font-weight: 100;
+        text-transform: uppercase;
+        color: #9BA7AF;
+    }
+    .timelistContainer {
+        display: none
+    }
+    .circle-day {
+        width: 40px;
+        height: 100%;
+        border-radius: 2%;
+        padding: 10px;
+        align-items: center;
+        font-size: 12px;
+        background-color: #FFD500;
+        color: white;
+        text-transform: uppercase;
+    }
 }
