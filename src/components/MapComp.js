@@ -2,13 +2,21 @@ import React, { useContext, useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import "../assets/MapComp.css";
 import { AppContext } from "../context/AppContext";
-
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer,Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { Card, Button, Breadcrumb } from "react-bootstrap";
 import { GoChevronRight } from "react-icons/go";
-
+import MapIcon from '../assets/img/pin.svg'
+import L from 'leaflet';
 
 const MapComp = () => {
+
+  let leafletIcon = L.icon({
+    iconUrl:MapIcon,
+
+    iconSize:[30,30],
+    
+
+})
   const { data } = useContext(AppContext);
 
   let adulti = 0;
@@ -20,7 +28,6 @@ const MapComp = () => {
       adolescenti += 1;
     }
   });
-
 
   const arrCitta = [];
   const coordsCitta = [];
@@ -60,14 +67,12 @@ const MapComp = () => {
                 zoom={7}
                 scrollWheelZoom={false}
               >
-
                 <TileLayer
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-
                 {coordsCitta.map((coord, i) => (
-                  <Marker key={i} position={coord}>
+                  <Marker key={i} position={coord} icon={leafletIcon}>
                     <Popup>
                       A pretty CSS3 popup. <br /> Easily customizable.
                     </Popup>
