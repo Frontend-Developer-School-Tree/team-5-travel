@@ -7,3 +7,16 @@ npm install -s react react-dom leaflet
 npm install react-router-dom
 npm install react-cookie
 npm install react-icons --save
+
+
+
+
+
+.htaccess //configurazione
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+</IfModule>

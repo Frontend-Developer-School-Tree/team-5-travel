@@ -1,8 +1,5 @@
 
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
   Link
 } from "react-router-dom";
 
@@ -14,7 +11,7 @@ import "../assets/Navbar.css";
 const Navbar = () => {
   let auth = useContext(authContext);
   const [showMenu, setShowMenu] = useState(false)
-
+  
   return (
 
     <div className="Navbar">
@@ -29,7 +26,7 @@ const Navbar = () => {
           <a className="modLink" href="#Mappa"><div className="userActionsButton"><h2>Mappa</h2></div></a>
           <a href="#ListaPosti" className="modLink"> <div className="userActionsButton"><h2>Itinerario</h2></div></a>
           <a href="#Tariffe" className="modLink"><div className="userActionsButton"><h2>Informazioni</h2></div></a>
-          <Link to="/login" onClick={() => { auth.signout() }} activeClassName="modLink">
+          <Link to="/login" onClick={() => { auth.signout() }} className="modLink">
             <div className="userActionsButton"><h2>Logout</h2></div>
           </Link>
         </div>

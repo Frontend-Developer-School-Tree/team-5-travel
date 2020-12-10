@@ -19,7 +19,7 @@ import { authContext } from "../context/ProvideAuth";
 import Tariffe from './Tariffe';
 import '../assets/cardInfo.css';
 import ListaInfo from './ListaInfo';
-
+import Chatbot from './Chatbot';
 
 
 function Page() {
@@ -40,6 +40,7 @@ function Page() {
         <>
 
           <Navbar />
+          <Chatbot />
           <Header />
 
           <div className="Container">

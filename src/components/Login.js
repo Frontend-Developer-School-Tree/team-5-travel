@@ -56,18 +56,6 @@ const Login = () => {
       }}>
 
 
-
-        {/* video aereo
-        https://player.vimeo.com/external/333365608.hd.mp4?s=1c5b78844d76fe0d099409a3c94ecf55c911ebb0  */}
-
-        {/* video resort
-        "contentUrl":"https://player.vimeo.com/external/330412624.hd.mp4?s=9a9c77ce40f703dcb023eca64c85e258195efa28 */}
-
-        {/* video pexels
-        <source src="https://static.pexels.com/lib/videos/free-videos.mp4" type="video/mp4">
-        </source>
-        <source src="https://static.pexels.com/lib/videos/free-videos.webm" type="video/webm"></source> */}
-
         <source src={bgLogin[Math.floor(Math.random()*(bgLogin.length-1 - 0)) + 0]} type="video/mp4">
         </source>
 

@@ -12,7 +12,7 @@ import ProvideAuth from './context/ProvideAuth'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
+  Route, 
   Link, Redirect
 } from "react-router-dom";
 
