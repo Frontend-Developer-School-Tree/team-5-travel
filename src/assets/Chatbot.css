@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 .Chatbot .card {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -15,49 +16,91 @@
   bottom: 0;
   right: 0;
   z-index: 2000;
-  display: flex;
   width: 30vw;
-  justify-content: flex-end; 
+  justify-content: flex-end;
+  display:none;
 }
 
 .Chatbot .arrowIcon {
   font-size: 25px;
   display: flex;
   justify-content: flex-end;
-  background-color: #858585;
-  padding:15px;
+  background-color: #c7c7c7;
+  padding: 15px;
 }
 
 .ChatbotContainer {
   width: 100%;
 }
-.parlaCon{
+
+.parlaCon {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nomeOperatore{
+.parlaCon:hover {
+  background-color: white;
+}
+
+.msgItem {
+  display: flex;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.nomeOperatore {
   margin-left: 15px;
 }
 
-.inputMessagge{
-  flex:3;
-  padding:10px;
-  border:0;
+.inputMessagge {
+  font-size: 18px;
+  flex: 3;
+  padding: 10px;
+  border: 0;
   background-color: #ffff70;
 }
-.inputButton{
-  flex:1;
-  padding:10px;
-  width:100%;
+
+.inputButton {
+  flex: 1;
+  padding: 10px;
+  width: 100%;
   background-color: #ffb300;
 }
 
-
 .listaMessaggi {
-  padding:15px;
-  height:40vh;
-  background-color: #c7c7c7;
+  padding: 15px;
+  height: 40vh;
+  background-color:#ffffd7;
+  border: 6px solid #ffff70;
+  border-bottom:0;
   overflow: auto;
+}
+
+.popupMsg {
+  border-radius: 8px;
+  padding: 8px;
+  width: 70%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.116), 0 2px 5px rgba(0, 0, 0, 0.123);
+}
+
+.headsetChatBot {
+  font-size: 25px;
+  margin-right: 20px;
+  color: #5a5a5a;
+}
+
+@media screen and (max-width: 792px) {
+  .talkWith {
+    display: none;
+  }
+  .Chatbot .arrowIcon {
+    display:none
+  }
+  .Chatbot{
+    width: auto
+  }
+  .headsetChatBot {
+    padding:10px;
+  }
 }
